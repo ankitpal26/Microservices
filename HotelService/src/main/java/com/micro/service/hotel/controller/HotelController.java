@@ -30,7 +30,7 @@ public class HotelController {
 
     //get all
     @GetMapping
-    public ResponseEntity<List<Hotel>> getSingleHotel(){
+    public ResponseEntity<List<Hotel>> getAllHotel(){
         return ResponseEntity.status(HttpStatus.OK).body(hotelServices.getAllHotels());
     }
 

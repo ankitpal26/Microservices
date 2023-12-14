@@ -1,18 +1,19 @@
 package com.microservice.rating.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.*;
+
+
+import javax.persistence.*;
+import javax.persistence.Table;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document("user_ratings")
+@Entity
+@Table(name = "user_ratings")
 public class Rating {
+
     @Id
     private String ratingId;
     private String userId;
